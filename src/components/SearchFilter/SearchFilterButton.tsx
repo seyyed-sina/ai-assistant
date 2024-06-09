@@ -17,7 +17,7 @@ export const SearchFilterButton: React.FC<FilterButtonProps> = ({
     <button
       className={clsx(
         'flex items-center justify-center py-2 px-4 rounded-full bg-white shadow-md gap-1',
-        selected && 'bg-green-500 text-white',
+        selected && '!bg-green-500 text-white',
       )}
       onClick={onClick}
     >
