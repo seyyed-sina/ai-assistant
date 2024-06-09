@@ -31,7 +31,7 @@ export const useAnimatedText = (
       return [cps, cpc]
     }
 
-    const textLength = text.length
+    const textLength = text?.length || 0
 
     const maxCps = 30
     const maxCalls = (maxTime / 1000) * maxCps

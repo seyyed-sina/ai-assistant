@@ -90,10 +90,11 @@ export const HomePage: React.FC<HomePageProps> = ({ className, ...props }) => {
       />
       <ChatMessages
         className="py-[20px]"
-        data={messages.map((msg) => ({
-          role: msg.role,
-          message: msg.message,
-        }))}
+        data={messages}
+        onMessageEdit={(newPrompt) => {
+          onPrompt(newPrompt)
+          onSearch()
+        }}
       />
     </ChatLayout>
   )
